@@ -30,6 +30,7 @@ Partial Class Form1
         Me.lblOutput = New System.Windows.Forms.Label()
         Me.btnClear = New System.Windows.Forms.Button()
         Me.lblAccuracy = New System.Windows.Forms.Label()
+        Me.btnClose = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'lblPrompt
@@ -60,7 +61,6 @@ Partial Class Form1
         Me.lstContainer.ItemHeight = 21
         Me.lstContainer.Location = New System.Drawing.Point(643, 99)
         Me.lstContainer.Name = "lstContainer"
-        Me.lstContainer.ScrollAlwaysVisible = True
         Me.lstContainer.Size = New System.Drawing.Size(98, 109)
         Me.lstContainer.TabIndex = 2
         '
@@ -87,7 +87,7 @@ Partial Class Form1
         '
         Me.btnClear.BackColor = System.Drawing.SystemColors.HotTrack
         Me.btnClear.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnClear.Location = New System.Drawing.Point(610, 462)
+        Me.btnClear.Location = New System.Drawing.Point(476, 460)
         Me.btnClear.Name = "btnClear"
         Me.btnClear.Size = New System.Drawing.Size(114, 41)
         Me.btnClear.TabIndex = 5
@@ -107,6 +107,18 @@ Partial Class Form1
         Me.lblAccuracy.Text = "(Results may not be accurate due to missing data points)"
         Me.lblAccuracy.Visible = False
         '
+        'btnClose
+        '
+        Me.btnClose.BackColor = System.Drawing.Color.Red
+        Me.btnClose.ForeColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnClose.Location = New System.Drawing.Point(627, 460)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(114, 41)
+        Me.btnClose.TabIndex = 7
+        Me.btnClose.Text = "Close"
+        Me.btnClose.UseVisualStyleBackColor = False
+        Me.btnClose.Visible = False
+        '
         'Form1
         '
         Me.AcceptButton = Me.btnEnterData
@@ -115,6 +127,7 @@ Partial Class Form1
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
         Me.CancelButton = Me.btnClear
         Me.ClientSize = New System.Drawing.Size(790, 527)
+        Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.lblAccuracy)
         Me.Controls.Add(Me.btnClear)
         Me.Controls.Add(Me.lblOutput)
@@ -137,4 +150,5 @@ Partial Class Form1
     Friend WithEvents lblOutput As Label
     Friend WithEvents btnClear As Button
     Friend WithEvents lblAccuracy As Label
+    Friend WithEvents btnClose As Button
 End Class
